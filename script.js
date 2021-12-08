@@ -18,15 +18,18 @@ buttons.map( button => {
                 break;
             case '=': // use the eval function to calculate the display text
                 try{
-                    display.innerText = eval(display.innerText);
                     
+                    display.innerText = eval(display.innerText);
+                
                 } catch { // in case its uncomputable math
                     display.innerText = "ERROR";
-                }
+                } 
+                break;
                 
                 
             default: // displays to the display area
                 display.innerText += e.target.innerText;
+                
         }
     })
 })
